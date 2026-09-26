@@ -1,0 +1,6 @@
+{
+  "name": "ระบบบริหารจัดการใบลาออนไลน์ สกร.ระดับอำเภอน้ำพอง",
+  "description": "ระบบบริหารจัดการใบลาออนไลน์สำหรับบุคลากร สกร.ระดับอำเภอน้ำพอง จ.ขอนแก่น เชื่อมต่อฐานข้อมูล Google Sheets และจัดเก็บเอกสารราชการบน Google Drive",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

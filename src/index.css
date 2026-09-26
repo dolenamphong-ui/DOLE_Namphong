@@ -1,0 +1,132 @@
+@import "tailwindcss";
+
+/* Font Loading & Embedding for TH Sarabun PSK / TH-Sarabun-PSK (16pt Thai Government Standard) */
+@font-face {
+  font-family: 'TH-Sarabun-PSK';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('TH Sarabun PSK'),
+       local('TH-Sarabun-PSK'),
+       local('THSarabunPSK'),
+       local('THSarabunNew'),
+       local('TH Sarabun New'),
+       url(https://fonts.gstatic.com/s/sarabun/v17/DtVjJx26TKEr37c9aAFJn2QN.woff2) format('woff2');
+  size-adjust: 86%;
+}
+
+@font-face {
+  font-family: 'TH-Sarabun-PSK';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('TH Sarabun PSK Bold'),
+       local('TH-Sarabun-PSK-Bold'),
+       local('THSarabunPSK-Bold'),
+       local('THSarabunNew Bold'),
+       local('TH Sarabun New Bold'),
+       url(https://fonts.gstatic.com/s/sarabun/v17/DtVmJx26TKEr37c9YK5sik8s6zDX.woff2) format('woff2');
+  size-adjust: 86%;
+}
+
+@font-face {
+  font-family: 'TH Sarabun PSK';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('TH Sarabun PSK'),
+       local('TH-Sarabun-PSK'),
+       local('THSarabunPSK'),
+       local('THSarabunNew'),
+       local('TH Sarabun New'),
+       url(https://fonts.gstatic.com/s/sarabun/v17/DtVjJx26TKEr37c9aAFJn2QN.woff2) format('woff2');
+  size-adjust: 86%;
+}
+
+@font-face {
+  font-family: 'TH Sarabun PSK';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('TH Sarabun PSK Bold'),
+       local('TH-Sarabun-PSK-Bold'),
+       local('THSarabunPSK-Bold'),
+       local('THSarabunNew Bold'),
+       local('TH Sarabun New Bold'),
+       url(https://fonts.gstatic.com/s/sarabun/v17/DtVmJx26TKEr37c9YK5sik8s6zDX.woff2) format('woff2');
+  size-adjust: 86%;
+}
+
+@font-face {
+  font-family: 'TH Sarabun PSK';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: local('TH Sarabun PSK Italic'),
+       local('THSarabunNew Italic'),
+       url(https://fonts.gstatic.com/s/sarabun/v17/DtVhJx26TKEr37c9aBB5iXwJ1gk.woff2) format('woff2');
+  size-adjust: 86%;
+}
+
+@layer base {
+  :root {
+    --font-sans: 'Prompt', 'Sarabun', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-gov: 'TH-Sarabun-PSK', 'TH Sarabun PSK', 'THSarabunNew', 'Sarabun', serif;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    -webkit-tap-highlight-color: transparent;
+    background-color: #f8fafc;
+    color: #0f172a;
+  }
+}
+
+/* Official Thai Government Document Typography (TH-Sarabun-PSK 16pt standard) */
+.font-gov-sarabun {
+  font-family: 'TH-Sarabun-PSK', 'TH Sarabun PSK', 'THSarabunNew', 'Sarabun', sans-serif;
+  font-size: 16pt;
+  line-height: 1.35;
+}
+
+/* Custom scrollbar for clean mobile/desktop feel */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* A4 Print Stylesheet */
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 0;
+  }
+  body {
+    background: #ffffff !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-only-a4 {
+    box-shadow: none !important;
+    border: none !important;
+    margin: 0 !important;
+    width: 210mm !important;
+    min-height: 297mm !important;
+    padding: 20mm 20mm 20mm 25mm !important;
+    page-break-after: always;
+  }
+}
+
